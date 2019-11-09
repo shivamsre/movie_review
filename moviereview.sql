@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2018 at 08:46 PM
--- Server version: 10.1.32-MariaDB
--- PHP Version: 7.2.5
+-- Generation Time: Nov 21, 2018 at 01:54 PM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -40,7 +40,9 @@ CREATE TABLE `follow` (
 INSERT INTO `follow` (`user`, `following`) VALUES
 ('17', '17'),
 ('d=', '16'),
-('16', '16');
+('25', '15'),
+('29', '25'),
+('25', '25');
 
 -- --------------------------------------------------------
 
@@ -96,23 +98,7 @@ CREATE TABLE `review` (
 --
 
 INSERT INTO `review` (`moviename`, `username`, `comments`, `rating`, `id`) VALUES
-('1', 'Arjun', 'This song is good', '4', 16),
-('2', 'Vansh', 'good', '5', 17),
-('3', 'Ayush', 'great song', '5', 18),
-('5', 'Vansh', 'fine', '5', 17),
-('1', '', 'qwerty', '', 0),
-('3', 'Anush', 'cool', '5', 24),
-('3', 'qwe', 'qwerty', '5', 28),
-('3', 'Arjun', 'qwerty', '', 16),
-('', '', 'qwe', '', 0),
-('Venom', '', 'good movie', '5', 0),
-('Venom', 'Arjun', 'good movie', '1', 16),
-('Black Panther', 'Arjun', 'qwerty', '5', 16),
-('2', 'Arjun', 'qwert', '', 16),
-('', 'Arjun', 'good movie', '5', 16),
-('439079', 'Arjun', 'none', '5', 16),
-('335983', 'Arjun', 'hello', '1', 16),
-('${movieId}', 'Arjun', 'qwert', '1', 16);
+('1', 'Shivam', 'good', 'LIKE', 25);
 
 -- --------------------------------------------------------
 
@@ -131,19 +117,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`username`, `password`, `id`) VALUES
-('Arjun', 'qwerty', 16),
-('Vansh', 'qwerty', 17),
-('Ayush', 'qwerty', 18),
-('Antim', 'qwerty', 19),
-('Bittu', 'qwerty', 20),
-('Akhil', 'qwerty', 21),
 ('Akash', 'qwerty', 22),
-('Rahul', 'qwerty', 23),
-('Anush', 'qwerty', 24),
 ('Shivam', 'qwerty', 25),
-('Mehul', 'qwerty', 26),
-('Anuj', 'qwerty', 27),
-('qwe', 'qwerty', 28);
+('akshay', '12345', 29);
 
 --
 -- Indexes for dumped tables
@@ -175,7 +151,7 @@ ALTER TABLE `movies`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
